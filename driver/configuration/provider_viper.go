@@ -16,6 +16,11 @@ const (
 	FallBackDSN = ""
 )
 
+// NewViperProvider creates a ViperProvider instance
+func NewViperProvider() *ViperProvider{
+	return &ViperProvider{}
+}
+
 // DSN returns the DSN from viper config or the fallback value
 func (p *ViperProvider) DSN() string {
 	// TODO: Refactor it: consider to move this logic to external package
